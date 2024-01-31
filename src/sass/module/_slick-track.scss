@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.slick-slider .slick-list {
+    background-color: #fff;
+}
+
+.slick-slider .slick-list,
+.slick-slider .slick-track {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    display: block;
+    left: 0;
+    position: relative;
+    top: 0;
+}
+
+.slick-track:after,
+.slick-track:before {
+    content: "";
+    display: table;
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}

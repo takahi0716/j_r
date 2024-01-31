@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.tel {
+    pointer-events: auto;
+}
+@include mq("md") {
+    .tel {
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.moisture {
+    padding: get_vw(134) 0;
+    background: url("../img/bg-secret__moisture.png") center center / cover no-repeat;
+    position: relative;
+    border: 20px solid #3a4f6b;
+}
+
+@include mq(md){
+    .moisture {
+        padding: rem(150) 0;
+    }
+}
+
+.moisture__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: get_vw(56);
+}
+
+@include mq(md){
+    .moisture__wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: rem(56);
+    }
+}
+
+.moisture__title {
+    color: #fff;
+    text-align: center;
+    font-size: get_vw(42);
+}
+
+@include mq(md){
+    .moisture__title {
+       font-size: rem(22);
+    }
+}
+
+.moisture__image {
+    max-width: get_vw(520);
+    margin: get_vw(77) auto 0;
+}
+
+@include mq(md){
+    .moisture__image {
+        max-width: rem(339);
+        margin: rem(42) auto 0;
+    }
+}
+
+.moisture__text {
+    font-size: get_vw(22);
+    color: #848e9a;
+    font-family: $gothic-font-family;
+    margin-top: get_vw(36);
+}
+
+@include mq(md){
+    .moisture__text {
+        font-size: rem(12);
+        margin-top: rem(18);
+    }
+    
+}

@@ -1,0 +1,40 @@
+@use "sass:math";
+
+// インナー幅設定
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1000px;
+// ※キュンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: min(calc(100 / 1200 * 100%),100px);
+$padding-sp: calc(40 / 797 * 100%);
+
+////////////////////
+// フォント設定
+////////////////////
+
+$gothic-font-family: 'Noto Sans JP', 'Yu Gothic', YuGothic, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$mincho-font-family: 'YuMincho', 'Yu Mincho', serif;
+// ※検証ツールでしっかり反映されているか確認する
+
+// フォントウェイト
+$regular: 300;
+$normal: 400;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$black: #111;
+$white: #fff;
+$red: #d91b1b;
+
+body {
+  overflow-x: hidden !important;
+  font-family: $mincho-font-family;
+  font-weight: $normal;
+  letter-spacing: 0.15em;
+  font-feature-settings: "palt";
+}

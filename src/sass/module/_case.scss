@@ -1,0 +1,211 @@
+@use "global" as *;
+
+.case {
+    padding: get_vw(134) 0 get_vw(140);
+    background: url("../img/bg-case.jpg") center center / cover no-repeat;
+    color: #fff;
+}
+
+@include mq(md) {
+    .case {
+        padding: rem(99) 0 rem(130);
+        background: url("../img/bg-case-pc.jpg") center center / cover no-repeat;
+    }
+}
+
+@include mq(md) {
+    .case .case__inner {
+        max-width: 1280px;
+        padding-left: rem(40);
+        padding-right: rem(40);
+    }
+}
+
+.case__title {
+    text-align: center;
+}
+
+.case__sub-title {
+    font-size: get_vw(26);
+    letter-spacing: 0.1em;
+}
+
+@include mq(md) {
+    .case__sub-title {
+        font-size: rem(22);
+    }
+}
+
+.case__title h2 {
+    font-size: get_vw(40);
+    letter-spacing: 0.13em;
+}
+
+@include mq(md) {
+    .case__title h2 {
+        font-size: rem(42);
+        margin-top: rem(10);
+        letter-spacing: 0.16em;
+    }
+}
+
+.case__title h2 span {
+    font-size: get_vw(55);
+}
+
+@include mq(md) {
+    .case__title h2 span {
+        font-size: rem(55);
+    }
+}
+
+.case__wrapper {
+    margin-top: get_vw(36);
+}
+
+@include mq(md) {
+    .case__wrapper {
+        margin-top: rem(83);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(36);
+    }
+}
+
+.case__content {
+    margin-top: get_vw(70);
+}
+
+@include mq(md) {
+    .case__content {
+        margin-top: 0;
+    }
+}
+
+.case__text {
+    margin-top: get_vw(70);
+    font-size: get_vw(28);
+    padding-left: get_vw(100);
+    line-height: calc(57 / 28);
+    position: relative;
+    letter-spacing: 0.15em;
+    margin-right: get_vw(-20);
+}
+
+@include mq(md) {
+    .case__text {
+        margin-top: rem(43);
+        font-size: rem(18);
+        padding-left: rem(43);
+        line-height: calc(48 / 18);
+    }
+}
+
+.case__text::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: get_vw(618);
+    top: -10px;
+    left: get_vw(25);
+    background: url("../img/im-line.png") center center / contain no-repeat;
+}
+
+@include mq(md) {
+    .case__text::before {
+        height: rem(610);
+        left: 0;
+        top: -80px;
+    }
+}
+
+.case__text span {
+    background-color: #fff;
+    color: #1B2C44;
+    padding: get_vw(2) get_vw(10) get_vw(2) 0;
+    font-weight: bold;
+    position: relative;
+}
+
+.case__text span::before {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    top: 0;
+    left: rem(-5);
+    bottom: 0;
+    width: rem(6);
+}
+
+@include mq(md) {
+    .case__text span {
+        background-color: #fff;
+        padding: rem(6) rem(20) rem(6) 0;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .case__text span::before {
+        position: absolute;
+        content: "";
+        background-color: #fff;
+        top: 0;
+        left: rem(-20);
+        bottom: 0;
+        width: rem(21);
+    }
+}
+
+@include mq(md) {
+    .case__logo {
+        padding-left: rem(43);
+        text-align: left;
+    }
+}
+
+.case__introduction {
+    margin-top: get_vw(77);
+}
+
+@include mq(md) {
+    .case__introduction {
+        margin-top: rem(42);
+    }
+}
+
+.case__introduction-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: get_vw(56);
+}
+
+@include mq(md) {
+    .case__introduction-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: rem(26);
+    }
+}
+
+.case__introduction-title {
+    max-width: get_vw(277);
+    margin: 0 auto;
+}
+
+@include mq(md) {
+    .case__introduction-title {
+        max-width: rem(280);
+        margin: 0 auto;
+    }
+}
+
+.case__introduction-image {
+    margin-top: get_vw(20);
+    margin: 0 auto;
+    display: block;
+}
+
+@include mq(md) {
+    .case__introduction-image {
+        margin-top: rem(35);
+    }
+}

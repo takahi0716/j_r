@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.cart {
+    position: relative;
+}
+
+.cart::after {
+    content: '';
+    background-image: url("../img/ic-arrow-down-white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: get_vw(24);
+    height: get_vw(15);
+    display: block;
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+@include mq(md){
+    .cart::after {
+        width: rem(17);
+        height: rem(10);
+        right: 15px;
+    }
+}

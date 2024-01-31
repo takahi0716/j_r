@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.interview {
+    padding: get_vw(130) 0;
+    background: url("../img/bg-interview.jpg") center center / cover no-repeat;
+    position: relative;
+}
+
+@include mq(md) {
+    .interview {
+        padding: rem(100) 0 rem(130);
+        background: url("../img/bg-interview-pc.jpg") center center / cover no-repeat;
+
+    }
+}
+
+.interview::after {
+    position: absolute;
+    content: "";
+    height: get_vw(115);
+    width: 1px;
+    background-color: #aaa;
+    bottom: get_vw(-110);
+    left: 50%;
+    transform: translateY(-50%);
+}
+
+@include mq(md) {
+    .interview::after {
+        display: none;
+    }
+}
+
+.interview h2 {
+    text-align: center;
+    font-size: get_vw(55);
+    color: #e4d2b0;
+}
+
+@include mq(md) {
+    .interview h2 {
+        font-size: rem(55);
+    }
+}
+
+.interview h2 span {
+    font-size: get_vw(26);
+    color: #fff;
+    letter-spacing: 0;
+}
+
+@include mq(md) {
+    .interview h2 span {
+        font-size: rem(26);
+    }
+}
+
+.interview__articles {
+    margin-top: get_vw(67);
+}
+
+@include mq(md) {
+    .interview__articles {
+        margin-top: rem(50);
+    }
+}

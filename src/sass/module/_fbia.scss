@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.fbia {
+    font-family: $gothic-font-family;
+    padding: get_vw(40) get_vw(32);
+    border: 1px solid #000;
+    font-feature-settings: "palt";
+}
+
+@include mq(md){
+    .fbia {
+        padding: rem(40) rem(100);
+    }
+}
+
+.fbia__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: get_vw(15);
+}
+
+@include mq(md){
+    .fbia__wrap {
+        align-items: center;
+        gap: rem(43);
+    }
+}
+
+.fbia__img {
+    max-width: get_vw(115);
+}
+
+@include mq(md){
+    .fbia__img {
+        max-width: rem(135);
+    }    
+}
+
+.fbia__contein {
+    max-width: 77%;
+}
+
+@include mq(md){
+    .fbia__contein {
+        max-width: 82%;
+    }    
+}
+
+.fbia__head {
+    font-size: get_vw(37);
+    line-height: calc(49 / 37);
+    letter-spacing: 0em;
+}
+
+@include mq(md){
+    .fbia__head {
+        font-size: rem(26);
+        letter-spacing: 0em;
+    }
+}
+
+.fbia__txt {
+    margin-top: get_vw(25);
+}
+
+@include mq(md){
+    .fbia__txt {
+        margin-top: rem(26);
+        line-height: calc(32 / 16);
+        font-size: rem(16);
+        letter-spacing: 0.04em;
+    }
+}
+
+.fbia__notes {
+    margin-top: get_vw(22);
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+@include mq(md){
+    .fbia__notes {
+        margin-top: rem(12);
+        font-size: rem(12);
+    }
+}

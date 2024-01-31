@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.kv {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    padding-top: calc(952 / 767 * 100%);
+    background-color: #12253e
+}
+
+@include mq(md){
+    .kv {
+        // padding-top: 40%;
+        padding-top: calc(656 / 1536 * 100%);
+    }
+}
+
+.kv__inner {
+    background-color: #12253e
+}
+
+.kv__img {
+    padding-bottom: calc(952 / 767 * 100%);
+    top: 0;
+    right: 0;
+    left: 0;
+    background: url("../img/bg-fv-sp.jpg") no-repeat center center;
+    background-size: 100% auto;
+    z-index: 1;
+    position: absolute
+}
+
+@include mq(md){
+    .kv__img {
+        background: url("../img/bg-fv.jpg") no-repeat center center;
+        background-size: 100% auto;
+        padding-bottom: calc(656 / 1536 * 100%);
+    }
+}
+
+.kv__head {
+    background-color: #005e89;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.kv__head a {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    width: 100%;
+    text-decoration: none;
+    font-size: get_vw(20);
+    line-height: calc(28.8 / 16);
+    letter-spacing: 0.2em;
+    font-family: $gothic-font-family;
+}
+
+@include mq("md") {
+    .kv__head a {
+        font-size: rem(16);
+    }
+}
+
+.kv__head a:after {
+    content: '';
+    background-image: url("../img/ic-arrow-white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10px;
+    height: 10px;
+    display: block;
+    margin-left: 13px;
+    top: 2px;
+    position: relative;
+}

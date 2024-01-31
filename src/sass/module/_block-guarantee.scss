@@ -1,0 +1,140 @@
+@use "global" as *;
+
+.block-guarantee {
+    background: url("../img/bg-block-guarantee.jpg") center center / cover no-repeat;
+    border: 1px solid #8595ac;
+}
+
+.block-guarantee__inner {
+    position: relative;
+    padding: get_vw(30) get_vw(40);
+}
+
+.block-guarantee__block-left {
+    width: get_vw(66);
+    height: get_vw(88);
+    margin-bottom: 6px;
+}
+
+.block-guarantee__block-right {
+    text-align: left;
+}
+
+.block-guarantee__text-1 {
+    font-size: get_vw(32);
+    line-height: calc(23.8 / 17);
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    margin-bottom: 2px;
+    position: absolute;
+    top: get_vw(45);
+    left: get_vw(108);
+}
+
+.block-guarantee__text-2 {
+    font-size: get_vw(27);
+    line-height: calc(19.6 / 14);
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    margin-bottom: 13px;
+    font-family: $gothic-font-family;
+}
+
+
+.block-guarantee__external {
+    font-size: get_vw(24);
+    line-height: calc(19.6 / 14);
+    letter-spacing: 0.08em;
+    color: #3980d3;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: $gothic-font-family;
+}
+
+.block-guarantee__aster-wrapper {
+    font-size: get_vw(23);
+    line-height: calc(19.2 / 12);
+    letter-spacing: 0.08em;
+    color: #5c656b;
+    font-family: $gothic-font-family;
+}
+
+.block-guarantee__aster-wrapper span {
+    margin-right: 4px;
+}
+
+@include mq(md) {
+    .block-guarantee {
+        border: none;
+        margin: auto auto 37px auto;
+        max-width: 720px;
+    }
+
+    .block-guarantee__inner {
+        display: flex;
+        padding: rem(24) rem(10) rem(24) rem(70);
+    }
+
+    .block-guarantee__block-left {
+        margin-right: rem(17);
+        width: 44px;
+        height: auto;
+    }
+
+    .block-guarantee__text {
+        margin-bottom: 11px;
+        margin-top: 3px;
+    }
+
+    .block-guarantee__text-1 {
+        display: block;
+        font-size: rem(17);
+        font-weight: bold;
+        letter-spacing: 0.08em;
+        line-height: calc(19.6 / 18);
+        margin-bottom: 7px;
+        top: 0;
+        left: 0;
+        position: relative;
+        margin-top: rem(10);
+    }
+
+    .block-guarantee__text-2 {
+        font-size: 0.875rem;
+        font-weight: bold;
+        letter-spacing: 0.08em;
+        line-height: calc(19.6 / 14);
+        margin-bottom: 13px;
+    }
+
+    .block-guarantee__external {
+        align-items: center;
+        color: #3980d3;
+        display: inline-flex;
+        font-size: rem(14);
+        letter-spacing: 0.08em;
+        line-height: calc(19.6 / 14);
+        text-decoration: none;
+    }
+
+    .block-guarantee__external:after {
+        background-image: url("/assets/beauty/refa/haircare/products/img/ic-openwindow-blue.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        display: block;
+        height: 12px;
+        margin-left: 3px;
+        width: 12px;
+    }
+
+    .block-guarantee__aster-wrapper {
+        color: #5c656b;
+        display: inline-flex;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        line-height: calc(19.2 / 12);
+        margin-left: 20px;
+    }
+}

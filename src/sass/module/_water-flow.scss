@@ -1,0 +1,128 @@
+@use "global" as *;
+
+.water-flow {
+    padding: get_vw(130) 0;
+    background: url("../img/bg-water-flow.jpg") bottom center / cover no-repeat;
+}
+
+
+
+@include mq(md){
+    .water-flow__inner {
+        padding: 0 rem(10);
+    }
+}
+
+@include mq(md){
+    .water-flow {
+        padding: rem(124) 0 rem(136);
+        background: url("../img/bg-water-flow-pc.jpg") bottom center / cover no-repeat;
+    }
+}
+
+.water-flow__sub-titile {
+    font-size: get_vw(26);
+    text-align: center;
+}
+
+@include mq(md){
+    .water-flow__sub-titile {
+        font-size: rem(26);
+    }
+}
+
+.water-flow__sub-titile span {
+    color: #ff0000;
+
+}
+
+.water-flow__titile {
+    font-size: get_vw(42);
+    text-align: center;
+    margin-top: get_vw(18);
+}
+
+.water-flow__titile span {
+    font-size: get_vw(55);
+}
+
+@include mq(md){
+    .water-flow__titile {
+        font-size: rem(42);
+        margin-top: rem(29);
+    }
+
+    .water-flow__titile span {
+        font-size: rem(55);
+    }
+}
+
+.water-flow__image {
+    max-width: get_vw(688);
+    margin-top: get_vw(50);
+}
+
+@include mq(md){
+    .water-flow__image {
+        max-width: rem(391);
+        margin-top: rem(40);
+        margin: 0 auto;
+    }
+}
+
+.water-flow__text {
+    font-size: get_vw(26);
+    font-family: $gothic-font-family;
+    margin-top: get_vw(24);
+    text-align: center;
+    letter-spacing: 0.08em;
+}
+
+@include mq(md){
+    .water-flow__text {
+        font-size: rem(18);
+        margin-top: rem(20);
+    }
+}
+
+.water-flow__container {
+    margin-top: get_vw(90);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: get_vw(90);
+}
+
+@include mq(md){
+    .water-flow__container {
+        margin-top: rem(180);
+        gap: rem(32);
+    }
+}
+
+.water-flow__item {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@include mq(md){
+    .water-flow__item {
+        grid-template-columns: 50% min(43%,515px);
+        align-items: center;
+        gap: rem(100);
+    }
+
+    .water-flow__item:nth-child(even){
+        grid-template-columns: min(43%,515px) 50%;
+    }
+
+    .water-flow__item:nth-child(even) div:nth-child(1){
+        order: 2;
+    }
+
+    .water-flow__item:nth-child(even) div:nth-child(2){
+        order: 1;
+    }
+}
+
+
+

@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.flow-pattern h3 {
+    font-size: get_vw(50);
+    text-align: center;
+}
+
+@include mq(md){
+    .flow-pattern h3 {
+        font-size: rem(50);
+    }
+}
+
+.flow-pattern p {
+    margin-top: get_vw(73);
+    font-size: get_vw(28);
+    line-height: calc(57 / 28);
+    text-align: center;
+}
+
+@include mq(md){
+    .flow-pattern p  {
+        margin-top: rem(33);
+        font-size: rem(16);
+    }
+}
+
+
+.flow-pattern__image {
+    margin-top: get_vw(52);
+}
+
+@include mq(md){
+    .flow-pattern__image {
+        margin-top: 0;
+    }
+}

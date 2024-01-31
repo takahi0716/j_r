@@ -1,0 +1,119 @@
+@use "global" as *;
+
+.offer-head {
+    background: url("../img/bg-offer.jpg") center center / cover no-repeat;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: get_vw(94) 0;
+}
+
+@include mq(md) {
+    .offer-head {
+        background: url("../img/bg-offer-pc.jpg") center center / cover no-repeat;
+        padding: rem(74) 0;
+    }
+}
+
+.offer-head__sub-title {
+    position: relative;
+    display: inline;
+    letter-spacing: 0.13em;
+}
+
+.offer-head__sub-title::after {
+    content: "※3";
+    position: absolute;
+    top: get_vw(-13);
+    right: get_vw(-35);
+    font-size: get_vw(20);
+    letter-spacing: 0;
+}
+
+@include mq(md) {
+    .offer-head__sub-title::after {
+        font-size: rem(12);
+        top: rem(-10);
+        right: rem(-10);
+    }
+}
+
+.offer-head p {
+    color: #e4d2b0;
+    font-size: get_vw(25);
+}
+
+@include mq(md) {
+    .offer-head p {
+        font-size: rem(25);
+    }
+}
+
+.offer-head h2 {
+    font-size: get_vw(40);
+    color: #fff;
+    margin-top: get_vw(20);
+    line-height: 1;
+}
+
+@include mq(md) {
+    .offer-head h2 {
+        font-size: rem(40);
+        margin-top: rem(1);
+        letter-spacing: 0.1em;
+    }
+}
+
+.offer-head__logo {
+    margin-top: get_vw(10);
+    max-width: get_vw(313);
+    margin: 0 auto;
+}
+
+@include mq(md) {
+    .offer-head__logo {
+        margin-top: rem(-13);
+        max-width: rem(249);
+    }
+}
+
+.offer-head__intro {
+    margin-top: get_vw(38);
+}
+
+@include mq(md) {
+    .offer-head__intro {
+        margin-top: rem(41);
+        max-width: rem(500);
+        margin: 0 auto;
+    }
+}
+
+.offer-head__text {
+    margin-top: get_vw(41); 
+}
+
+@include mq(md) {
+    .offer-head__text {
+        // margin-top: rem(90);
+        max-width: rem(500);
+        margin: rem(16) auto 0;
+    }
+}
+
+.offer-head__text p {
+    font-size: get_vw(18);
+    text-align: left;
+    font-weight:100;
+    font-family: $gothic-font-family;
+    color: #fff;
+    letter-spacing: 0;
+}
+
+@include mq(md){
+    .offer-head__text p  {
+        font-size: rem(12);
+        line-height: calc(25 /12);
+        color: #000;
+    }
+}

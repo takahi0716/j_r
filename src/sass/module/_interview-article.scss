@@ -1,0 +1,138 @@
+@use "global" as *;
+
+.interview-article {
+    border-top: 15px solid;
+    border-image: url("../img/bg-line-gold.jpg");
+    border-image-slice: 30 fill;
+}
+
+@include mq(md) {
+    .interview-article {
+        // display: grid;
+        // grid-template-columns: 45% 1fr;
+        // grid-template-rows: 100%;
+        // gap: 0;
+        display: flex;
+        // align-items: stretch;
+        justify-content: space-around;
+    }
+}
+
+.interview-article+.interview-article {
+    margin-top: get_vw(30);
+}
+
+@include mq(md) {
+    .interview-article+.interview-article {
+        margin-top: rem(30);
+    }
+}
+
+@include mq(md) {
+    .interview-article__image {
+        flex: 0 0 auto;
+        width: 45%;
+    }
+
+    .interview-article__image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.interview-article__wrap {
+    background-color: #fff;
+    padding: get_vw(47) get_vw(40);
+}
+
+@include mq(md) {
+    .interview-article__wrap {
+        padding: rem(23) rem(27);
+        width: 55%;
+    }
+}
+
+.interview-article__name {
+    text-align: center;
+    font-size: get_vw(55);
+    padding-bottom: get_vw(27);
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, rgba(#000, 0), rgba(#000, 1), rgba(#000, 0)) 1;
+}
+
+@include mq(md) {
+    .interview-article__name {
+        text-align: left;
+        font-size: rem(27);
+        padding-bottom: rem(20);
+    }
+}
+
+.interview-article__name span {
+    display: inline-block;
+    color: #957d4f;
+    font-size: get_vw(28);
+    line-height: calc(45 / 28);
+}
+
+@include mq(md) {
+    .interview-article__name span {
+        font-size: rem(16);
+    }
+}
+
+.interview-article__name .interview-article__name-title_of_honor {
+    font-size: get_vw(42);
+    color: #000;
+}
+
+@include mq(md) {
+    .interview-article__name .interview-article__name-title_of_honor {
+        font-size: rem(22);
+    }
+}
+
+.interview-article__head {
+    font-size: get_vw(30);
+    font-weight: 400;
+    font-family: $gothic-font-family;
+    color: #957d4f;
+    margin-top: get_vw(54);
+    line-height: calc(53 /30)
+}
+
+@include mq(md) {
+    .interview-article__head {
+        font-size: rem(16);
+        margin-top: rem(20);
+        line-height: calc(53 /30)
+    }
+}
+
+.interview-article__txt {
+    font-size: get_vw(28);
+    font-family: $gothic-font-family;
+    margin-top: get_vw(15);
+    line-height: calc(57 /28);
+    letter-spacing: 0.2em;
+}
+
+@include mq(md) {
+    .interview-article__txt {
+        font-size: rem(16);
+        margin-top: rem(4);
+    }
+}
+
+.interview-article__notes {
+    font-size: get_vw(20);
+    font-family: $gothic-font-family;
+}
+
+@include mq(md) {
+    .interview-article__notes {
+        font-size: rem(12);
+        letter-spacing: 0;
+    }
+}

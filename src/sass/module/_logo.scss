@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.logo {
+    font-size: get_vw(22);
+    color: #fff;
+    font-family: $gothic-font-family;
+    line-height: calc(22.4 / 16);
+    letter-spacing: 0.08em;
+}
+
+@include mq(md){
+    .logo  {
+        font-size: rem(20);
+    }
+}
+
+.logo--black {
+    color: #000;
+}
+
+.logo--case {
+    max-width:  get_vw(650);
+    margin: 0 auto;
+}
+
+
+.logo--case img{
+    width: 100%;
+}

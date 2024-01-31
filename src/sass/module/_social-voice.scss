@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.social-voice {
+    background: url("../img/bg-voice.png") center center / cover no-repeat;
+    position: relative;
+    z-index: 10;
+    padding: get_vw(46) get_vw(39) get_vw(21);
+    font-size: get_vw(24);
+    line-height: calc(46 / 24);
+    letter-spacing: 0.05em;
+}
+
+@include mq(md){
+    .social-voice {
+        padding: rem(22) rem(26);
+        font-size: rem(16);
+    }
+}
+
+.social-voice__text--red {
+    color: #D91B1B;
+}
+
+.social-voice__customer {
+    text-align: right;
+}
+
+.social-voice__text-sub {
+    font-size: get_vw(20);
+    opacity: 0.51;
+    letter-spacing: 0.14em;
+}
+
+@include mq(md){
+    .social-voice__text-sub{
+        font-size: rem(12);
+    }
+}

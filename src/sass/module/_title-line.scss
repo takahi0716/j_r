@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.title-line {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.title-line::before {
+    content: '';
+    background: linear-gradient(-90deg, rgba(#d9d9d9, 1), rgba(#d9d9d9, 0));
+    width: get_vw(93);
+    height: 1px;
+    display: block;
+    margin-right: get_vw(28);
+    position: relative;
+}
+
+@include mq(md) {
+    .title-line::before {
+        width: rem(90);
+        margin-right: rem(23);
+    }
+}
+
+.title-line::after {
+    content: '';
+    background: linear-gradient(90deg, rgba(#d9d9d9, 1), rgba(#d9d9d9, 0));
+    width: get_vw(93);
+    height: 1px;
+    display: block;
+    margin-left: get_vw(28);
+    position: relative;
+}
+
+@include mq(md) {
+    .title-line::after {
+        width: rem(90);
+        margin-left: rem(23);
+    }
+}
+
+.title-line__black::before {
+    background: linear-gradient(-90deg, rgba(#000, 1), rgba(#d9d9d9, 0));
+}
+
+.title-line__black::after {
+    background: linear-gradient(90deg, rgba(#000, 1), rgba(#d9d9d9, 0));
+}

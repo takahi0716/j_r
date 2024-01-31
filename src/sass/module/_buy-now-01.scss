@@ -1,0 +1,189 @@
+@use "global" as *;
+
+.buy-now-01 {
+    background-color: #fff;
+    padding: get_vw(90) get_vw(40);
+    margin-top: get_vw(70);
+
+    border-bottom: 16px #c4c4c4 solid;
+    border-image-slice: 30 fill;
+    border-image-source: url(../img/bg-offer-line.jpg);
+    border-top: 16px #c4c4c4 solid;
+}
+
+@include mq(md) {
+    .buy-now-01 {
+        padding: rem(66) rem(40);
+        margin-top: rem(58);
+    }
+}
+
+.buy-now-01__inner {
+    display: flex;
+    flex-direction: column;
+}
+
+@include mq(md) {
+    .buy-now-01__inner {
+        flex-direction: row;
+        justify-content: start;
+    }
+}
+
+.buy-now-01__wrapper h3 {
+    order: -1;
+}
+
+@include mq(md){
+    .buy-now-01__wrapper h3 {
+        order: 2;
+    }
+}
+
+
+.buy-now-01__title-ja {
+    font-size: get_vw(40);
+    display: block;
+}
+
+@include mq(md) {
+    .buy-now-01__title-ja {
+        font-size: rem(30);
+        letter-spacing: 0.14em;
+    }
+}
+
+.buy-now-01__title-en {
+    font-size: get_vw(22);
+    font-family: $gothic-font-family;
+}
+
+@include mq(md) {
+    .buy-now-01__title-en {
+        font-size: rem(16);
+        letter-spacing: 0.08em;
+    }
+}
+
+.buy-now-01__image {
+    margin-top: get_vw(93);
+}
+
+@include mq(md) {
+    .buy-now-01__image {
+        margin-top: rem(53);
+        width: 40%;
+        margin-left: rem(35);
+    }
+}
+
+.buy-now-01__wrapper {
+    display: contents;
+}
+
+@include mq(md){
+    .buy-now-01__wrapper {
+        display: block;
+        width: 44%;
+        text-align: left;
+        margin-left: rem(35);
+    }
+}
+
+.buy-now-01__choice {
+    margin-top: get_vw(68);
+}
+
+@include mq(md){
+    .buy-now-01__choice {
+        margin-top: rem(28);
+    }
+}
+
+.buy-now-01__choice li + li {
+    margin-top: get_vw(58);
+}
+
+@include mq(md){
+    .buy-now-01__choice li + li {
+        margin-top: rem(20);
+    }
+}
+
+.buy-now-01__feature-list {
+    margin-top: get_vw(40);
+}
+
+@include mq(md){
+    .buy-now-01__feature-list {
+        margin-top: rem(54);
+        text-align: center;
+        max-width: rem(346);
+        margin: 0 auto;
+    }
+}
+
+.buy-now-01__offer-btn {
+    margin-top: get_vw(40);
+}
+
+@include mq(md){
+    .buy-now-01__offer-btn {
+        margin-top: rem(12);
+        max-width: rem(346);
+        margin: 0 auto;
+    }
+}
+
+.buy-now-01__block-line {
+    margin-top: get_vw(45);
+}
+
+@include mq(md){
+    .buy-now-01__block-line {
+        margin-top: rem(12);
+        max-width: rem(346);
+        margin: 0 auto;
+    }
+}
+
+.buy-now-01__goodscomment {
+    margin-top: get_vw(36);
+}
+
+@include mq(md){
+    .buy-now-01__goodscomment {
+        margin-top: rem(12);
+    }
+}
+
+.buy-now-01__block-split {
+    margin-top: get_vw(36);
+    padding: 0 get_vw(40);
+}
+
+@include mq(md){
+    .buy-now-01__block-split {
+        margin-top: rem(36);
+        padding: 0 $padding-pc;
+    }
+}
+
+@include mq(md){
+    .buy-now-01__block-guarantee {
+        margin-top: rem(23);
+        padding: 0;
+    }
+}
+
+.buy-now-01__spec-table {
+    margin-top: get_vw(74);
+}
+
+@include mq(md){
+    .buy-now-01__spec-table {
+        margin-top: rem(40);
+        max-width: rem(720);
+        margin: 0 auto;
+    }
+}

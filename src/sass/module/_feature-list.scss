@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.feature-list {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: stretch;
+    font-size: get_vw(22);
+    line-height: calc(19.2 / 12);
+    letter-spacing: 0.08em;
+    row-gap: 6px;
+    justify-content: space-between;
+}
+
+@include mq(md){
+    .feature-list {
+        font-size: rem(12);
+
+    }
+}
+
+.feature-list > li {
+    padding: 2px 3%;
+    background-color: #ebebee;
+}
+
+@include mq(md){
+
+    .feature-list > li {
+        padding: 2px 3%;
+        background-color: #ebebee;
+    }
+}

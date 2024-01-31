@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.comparison {
+    padding: get_vw(130) 0 get_vw(100);
+    background: url("../img/bg-comparison.jpg") center center / cover no-repeat;
+    position: relative;
+}
+
+@include mq(md){
+    .comparison {
+        padding: rem(138) 0 rem(140);
+        background: url("../img/bg-comparison-pc.jpg") center center / cover no-repeat;
+    }
+}
+
+@include mq(md){
+    .comparison__inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 rem(40);
+    }
+}
+
+
+
+.comparison h2 {
+    text-align: center;
+    font-size: get_vw(42);
+}
+
+@include mq(md){
+    .comparison h2 {
+        font-size: rem(42);
+    }
+}
+
+.comparison__contain {
+    margin-top: get_vw(70);
+    overflow-x: scroll;
+    padding-right: get_vw(40);
+    padding-left: get_vw(40);
+}
+
+@include mq(md){
+    .comparison__contain {
+        margin-top: rem(60);
+        padding-right:0;
+        padding-left: 0;
+    }
+}
+
+.comparison__button {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: get_vw(40);
+    margin-top: get_vw(70);
+}
+
+@include mq(md){
+    .comparison__button {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: end;
+        gap: rem(40);
+        margin: rem(50) auto 0;
+        padding: 0 rem(100);
+        max-width: $inner;
+    }
+}

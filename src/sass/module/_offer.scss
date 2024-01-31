@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.offer__notes {
+
+}
+
+@include mq(md){
+    .offer__notes {
+        font-size: rem(12);
+        letter-spacing: 0.12em;
+        color: #b7b7b7;
+    }
+}
